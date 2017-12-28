@@ -1,2 +1,2 @@
-reconPath = "/usr/share/recon-ng/"
-altDnsPath = "/root/Desktop/altdns-master/"
+recon_path = "/usr/share/recon-ng/"
+altdns_path = "/root/Desktop/altdns-master/"

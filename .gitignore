@@ -8,3 +8,5 @@ ENV/
 *.txt
 *.lst
 data_output
+altdns
+recon-ng

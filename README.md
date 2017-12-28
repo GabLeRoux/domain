@@ -17,6 +17,8 @@ Script to enumerate subdomains, leveraging recon-ng. `enumall` uses the followin
 
 ## Pre-Requisites
 
+* **Python2**
+
 1. Clone the [Recon-ng][recon-ng] repository
 
    ```bash
@@ -44,7 +46,7 @@ Script to enumerate subdomains, leveraging recon-ng. `enumall` uses the followin
 5. (optional, but highly recommended) download: 
 
     + [altdns][altdns]
-    + a good subdomain bruteforce list such as [danielmiessler/SecLists's sorted_knock_dnsrecon_fierce_recon-ng.txt](https://github.com/danielmiessler/SecLists/blob/master/Discovery/DNS/sorted_knock_dnsrecon_fierce_recon-ng.txt)
+    + a good subdomain bruteforce list such as [danielmiessler/SecLists's sorted_knock_dnsrecon_fierce_recon-ng.txt][]
 
 6. Create `config.py` file and specify the path to `recon-ng` and `altdns` as shown in [`config_sample.py`](config_sample.py)
 
@@ -68,9 +70,14 @@ Optional arguments:
 
 Output from recon-ng will be in `.lst` and `.csv` files, output from alt-dns will be in a `.txt` file
 
+## Origin
+
+[`enumall.py`](enumall.py) is a refactor of `enumall.sh` providing a script to identify subdomains using several techniques and tools. Relying heavily on the stellar Recon-NG framework and Alt-DNS, enumall will identify subdomains via search engine scraping (yahoo, google, bing, baidu), identify subdomains using common OSINT sites (shodan, netcraft), identify concatenated subdomains (altDNS), and brute-forces with a stellar subdomain list formed from [Bitquark's subdomain research][sorted_knock_dnsrecon_fierce_recon-ng.txt], Seclists, Knock, Fierce, Recon-NG, and more
+
 ## License
 
 [MIT](LICENSE.md) © @jhaddix and @leifdreizler
 
 [recon-ng]: https://bitbucket.org/LaNMaSteR53/recon-ng
 [altdns]: https://github.com/infosec-au/altdns
+[sorted_knock_dnsrecon_fierce_recon-ng.txt]: https://github.com/danielmiessler/SecLists/blob/master/Discovery/DNS/sorted_knock_dnsrecon_fierce_recon-ng.txt
